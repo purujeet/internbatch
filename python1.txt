@@ -1,0 +1,356 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+PS C:\Users\lenovo> python
+Python 3.6.3 |Anaconda, Inc.| (default, Oct 15 2017, 03:27:45) [MSC v.1900 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> help
+Type help() for interactive help, or help(object) for help about object.
+>>> credits
+    Thanks to CWI, CNRI, BeOpen.com, Zope Corporation and a cast of thousands
+    for supporting Python development.  See www.python.org for more information.
+>>> ^Z
+
+PS C:\Users\lenovo> vim hello.py
+PS C:\Users\lenovo> python hello.py
+Hello world
+PS C:\Users\lenovo> cd .\Desktop\internbatch
+PS C:\Users\lenovo\Desktop\internbatch> python
+Python 3.6.3 |Anaconda, Inc.| (default, Oct 15 2017, 03:27:45) [MSC v.1900 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> s='Hello world'
+>>> s[::-1}
+  File "<stdin>", line 1
+    s[::-1}
+          ^
+SyntaxError: invalid syntax
+>>> s[::-1]
+'dlrow olleH'
+>>> dir(s)
+['__add__', '__class__', '__contains__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getnewargs__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__mod__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__rmod__', '__rmul__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'capitalize', 'casefold', 'center', 'count', 'encode', 'endswith', 'expandtabs', 'find', 'format', 'format_map', 'index', 'isalnum', 'isalpha', 'isdecimal', 'isdigit', 'isidentifier', 'islower', 'isnumeric', 'isprintable', 'isspace', 'istitle', 'isupper', 'join', 'ljust', 'lower', 'lstrip', 'maketrans', 'partition', 'replace', 'rfind', 'rindex', 'rjust', 'rpartition', 'rsplit', 'rstrip', 'split', 'splitlines', 'startswith', 'strip', 'swapcase', 'title', 'translate', 'upper', 'zfill']
+>>> s.zfill.__doc__
+'S.zfill(width) -> str\n\nPad a numeric string S with zeros on the left, to fill a field\nof the specified width. The string S is never truncated.'
+>>> name=input("Enter your name:")
+Enter your name:123
+>>> x,y=5,10
+>>> x
+5
+>>> y
+10
+>>> name,grade=input("Name:"),input("grade:")
+Name:saa
+grade:22
+>>> name
+'saa'
+>>> name=input("Name=").strip()
+Name=       i
+>>> name
+'i'
+>>> s="python java ruby perl javascript"
+>>> s
+'python java ruby perl javascript'
+>>> mylist=s.split()
+>>> mylist
+['python', 'java', 'ruby', 'perl', 'javascript']
+>>> name=input("Name:").strip(',')
+Name:wfd
+>>> name=input("Name:").split(',')
+Name:x
+>>> name=input("Name:")
+Name:python,java,perl,ruby,swift
+>>> res=name.split(',')
+>>> res
+['python', 'java', 'perl', 'ruby', 'swift']
+>>> r2=' '.join(res)
+>>> r2
+'python java perl ruby swift'
+>>> s1=input()
+      hello world welcome to python
+>>> s=s1.strip()
+>>> name=s.split(' ')
+>>> name
+['hello', 'world', 'welcome', 'to', 'python']
+>>> r1=','.join(name)
+>>> r1
+'hello,world,welcome,to,python'
+>>> name=s.split(',')
+>>> r1='_'.join(name)
+>>> r1
+'hello world welcome to python'
+>>> name
+['hello world welcome to python']
+>>> ls=name.split(' ')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'list' object has no attribute 'split'
+>>> name='    hello world welcome to python     '.sprit()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'str' object has no attribute 'sprit'
+>>> name=input()
+     hello world welcome to python
+>>> name.sprit()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'str' object has no attribute 'sprit'
+>>> name.split()
+['hello', 'world', 'welcome', 'to', 'python']
+>>> ls=name.split()
+>>> r1='_'.join(ls)
+>>> r1
+'hello_world_welcome_to_python'
+>>> r1.split()
+['hello_world_welcome_to_python']
+>>> name=input("")
+hello world welcome to python
+>>> name.replace(' ',',')
+'hello,world,welcome,to,python'
+>>> name.replace(',','_')
+'hello world welcome to python'
+>>> l= ["hello ",1,3.14,'how',123]
+>>> len(l)
+5
+>>> l[3]
+'how'
+>>> l[:]
+['hello ', 1, 3.14, 'how', 123]
+>>> l[-5:-2]
+['hello ', 1, 3.14]
+>>> l[::-1]
+[123, 'how', 3.14, 1, 'hello ']
+>>> dir(l)
+['__add__', '__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__iadd__', '__imul__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__rmul__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'append', 'clear', 'copy', 'count', 'extend', 'index', 'insert', 'pop', 'remove', 'reverse', 'sort']
+>>> l=[32,60,36,2,10]
+>>> l.index(10)
+4
+>>> user=['z','y','x','sachin','purujeet']
+>>> print(user.index(input()))
+purujeet
+4
+>>> user
+['z', 'y', 'x', 'sachin', 'purujeet']
+>>> user.append('python')
+>>> user
+['z', 'y', 'x', 'sachin', 'purujeet', 'python']
+>>> user.append('python,hi')
+>>> user
+['z', 'y', 'x', 'sachin', 'purujeet', 'python', 'python,hi']
+>>> user.insert(user.index('y'),3+5j)
+>>> user
+['z', (3+5j), 'y', 'x', 'sachin', 'purujeet', 'python', 'python,hi']
+>>> l=['sam','harry','jogn']
+>>> user.extend(l)
+>>> user
+['z', (3+5j), 'y', 'x', 'sachin', 'purujeet', 'python', 'python,hi', 'sam', 'harry', 'jogn']
+>>> user.pop()
+'jogn'
+>>> user
+['z', (3+5j), 'y', 'x', 'sachin', 'purujeet', 'python', 'python,hi', 'sam', 'harry']
+>>> user.remove(x)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: list.remove(x): x not in list
+>>> user.remove('x')
+>>> user.remove(3+5j)
+>>> user
+['z', 'y', 'sachin', 'purujeet', 'python', 'python,hi', 'sam', 'harry']
+>>> user.sort()
+>>> user
+['harry', 'purujeet', 'python', 'python,hi', 'sachin', 'sam', 'y', 'z']
+>>> user.sort(reverse=True)
+>>> user
+['z', 'y', 'sam', 'sachin', 'python,hi', 'python', 'purujeet', 'harry']
+>>> user=[2,'fbf']
+>>> user.insert(user.index(2),3+5j)
+>>> user
+[(3+5j), 2, 'fbf']
+>>> user.insert(user.index(2),3)
+>>> user
+[(3+5j), 3, 2, 'fbf']
+>>> ^Z
+
+PS C:\Users\lenovo\Desktop\internbatch> jupyter-notebook
+[I 11:36:23.854 NotebookApp] JupyterLab alpha preview extension loaded from C:\ProgramData\Anaconda3\lib\site-packages\jupyterlab
+JupyterLab v0.27.0
+Known labextensions:
+[I 11:36:23.885 NotebookApp] Running the core application with no additional extensions or settings
+[I 11:36:24.026 NotebookApp] Serving notebooks from local directory: C:\Users\lenovo\Desktop\internbatch
+[I 11:36:24.026 NotebookApp] 0 active kernels
+[I 11:36:24.026 NotebookApp] The Jupyter Notebook is running at: http://localhost:8888/?token=7534a8d0d6fb3ecac56d95360115765fa3686b0f372df2eb
+[I 11:36:24.042 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 11:36:24.057 NotebookApp]
+
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:8888/?token=7534a8d0d6fb3ecac56d95360115765fa3686b0f372df2eb
+[I 11:36:27.933 NotebookApp] Accepting one-time-token-authenticated connection from ::1
+[I 11:36:46.363 NotebookApp] 302 GET /tree (::1) 1.00ms
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+PS C:\Users\lenovo> python
+Python 3.6.3 |Anaconda, Inc.| (default, Oct 15 2017, 03:27:45) [MSC v.1900 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> t=(1,2,3.14,'hello')
+>>> type()t
+  File "<stdin>", line 1
+    type()t
+          ^
+SyntaxError: invalid syntax
+>>> type(t)
+<class 'tuple'>
+>>> dir(t)
+['__add__', '__class__', '__contains__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getnewargs__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__rmul__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'count', 'index']
+>>> info={
+... 'name':'python',
+... 'version':[('1.X',1994),('2.X',2000),('3.X',2007)]
+... 'Inventor':'guido van rossum'
+  File "<stdin>", line 4
+    'Inventor':'guido van rossum'
+             ^
+SyntaxError: invalid syntax
+>>> 'Inventor' : 'guido van rossum'
+  File "<stdin>", line 1
+SyntaxError: illegal target for annotation
+>>> 'Inventor' : 'guido van rossum',
+  File "<stdin>", line 1
+    'Inventor' : 'guido van rossum',
+                                   ^
+SyntaxError: invalid syntax
+>>> info={
+... 'name':'python',
+... 'version':[('1.X',1994),('2.X',2000),('3.X',2007)],
+... 'Inventor' : 'guido van rossum',
+... 'frame work':['django','flask','web2py']
+... ,
+... 'famous modules':['numpy','matplotlib','pandas'],
+... }
+>>> dir(info)
+['__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'clear', 'copy', 'fromkeys', 'get', 'items', 'keys', 'pop', 'popitem', 'setdefault', 'update', 'values']
+>>> info(name)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'name' is not defined
+>>> info.keys.__doc__
+"D.keys() -> a set-like object providing a view on D's keys"
+>>> info.keys()
+dict_keys(['name', 'version', 'Inventor', 'frame work', 'famous modules'])
+>>> info.values()
+dict_values(['python', [('1.X', 1994), ('2.X', 2000), ('3.X', 2007)], 'guido van rossum', ['django', 'flask', 'web2py'], ['numpy', 'matplotlib', 'pandas']])
+>>> info.fromkeys.__doc__
+'Returns a new dict with keys from iterable and values equal to value.'
+>>> info.fromkeys('name')
+{'n': None, 'a': None, 'm': None, 'e': None}
+>>> info.fromkeys(name)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'name' is not defined
+>>> info.items()
+dict_items([('name', 'python'), ('version', [('1.X', 1994), ('2.X', 2000), ('3.X', 2007)]), ('Inventor', 'guido van rossum'), ('frame work', ['django', 'flask', 'web2py']), ('famous modules', ['numpy', 'matplotlib', 'pandas'])])
+>>> info.keys('name')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: keys() takes no arguments (1 given)
+>>> info[name]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'name' is not defined
+>>> info[versions]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'versions' is not defined
+>>> info[version]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'version' is not defined
+>>> info['version']
+[('1.X', 1994), ('2.X', 2000), ('3.X', 2007)]
+>>> print(*info['version'])
+('1.X', 1994) ('2.X', 2000) ('3.X', 2007)
+>>> print(*info['version'][1])
+2.X 2000
+>>> dir(info)
+['__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'clear', 'copy', 'fromkeys', 'get', 'items', 'keys', 'pop', 'popitem', 'setdefault', 'update', 'values']
+>>> info.items()
+dict_items([('name', 'python'), ('version', [('1.X', 1994), ('2.X', 2000), ('3.X', 2007)]), ('Inventor', 'guido van rossum'), ('frame work', ['django', 'flask', 'web2py']), ('famous modules', ['numpy', 'matplotlib', 'pandas'])])
+>>> info.update.__doc__
+'D.update([E, ]**F) -> None.  Update D from dict/iterable E and F.\nIf E is present and has a .keys() method, then does:  for k in E: D[k] = E[k]\nIf E is present and lacks a .keys() method, then does:  for k, v in E: D[k] = v\nIn either case, this is followed by: for k in F:  D[k] = F[k]'
+>>> info.update(1,2,3),('hello','hi','how')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: update expected at most 1 arguments, got 3
+>>> info.update((1,2,3),('hello','hi','how'))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: update expected at most 1 arguments, got 2
+>>> info.update((1,2),('hello','hi'))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: update expected at most 1 arguments, got 2
+>>> info.update([(1,2),('hello','hi')])
+>>> info
+{'name': 'python', 'version': [('1.X', 1994), ('2.X', 2000), ('3.X', 2007)], 'Inventor': 'guido van rossum', 'frame work': ['django', 'flask', 'web2py'], 'famous modules': ['numpy', 'matplotlib', 'pandas'], 1: 2, 'hello': 'hi'}
+>>> value=[
+... ('one',1),
+... ('two',2),
+... ('three',3)]
+>>> value
+[('one', 1), ('two', 2), ('three', 3)]
+>>> info.update(value)
+>>> info
+{'name': 'python', 'version': [('1.X', 1994), ('2.X', 2000), ('3.X', 2007)], 'Inventor': 'guido van rossum', 'frame work': ['django', 'flask', 'web2py'], 'famous modules': ['numpy', 'matplotlib', 'pandas'], 1: 2, 'hello': 'hi', 'one': 1, 'two': 2, 'three': 3}
+>>> s={1,1,1,1,1,2,3,3,4,2,11,}
+>>> s
+{1, 2, 3, 4, 11}
+>>> dir(s)
+['__and__', '__class__', '__contains__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__iand__', '__init__', '__init_subclass__', '__ior__', '__isub__', '__iter__', '__ixor__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__or__', '__rand__', '__reduce__', '__reduce_ex__', '__repr__', '__ror__', '__rsub__', '__rxor__', '__setattr__', '__sizeof__', '__str__', '__sub__', '__subclasshook__', '__xor__', 'add', 'clear', 'copy', 'difference', 'difference_update', 'discard', 'intersection', 'intersection_update', 'isdisjoint', 'issubset', 'issuperset', 'pop', 'remove', 'symmetric_difference', 'symmetric_difference_update', 'union', 'update']
+>>> 10/3
+3.3333333333333335
+>>> 10//3
+3
+>>> 10%3
+1
+>>> 3**10
+59049
+>>> 10**3
+1000
+>>> 'hello '5
+  File "<stdin>", line 1
+    'hello '5
+            ^
+SyntaxError: invalid syntax
+>>> 'hello '*5
+'hello hello hello hello hello '
+>>>
