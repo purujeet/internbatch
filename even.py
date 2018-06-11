@@ -1,9 +1,9 @@
 i=int(input("Enter a number:"))
 
 if i%2:
-    print("It is odd")
+    print("Given number is odd",i)
 else:
-    print("It is even")
+    print("Given number is even",i)
 
 
         
